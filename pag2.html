@@ -11,74 +11,51 @@
 
     <style>
         /* Fondo de la página */
-        body {
-            background-image: url("AHORROS.png"); /* Ruta de la imagen */
-            background-size: cover; /* La imagen cubre toda la pantalla */
-            background-position: center center; /* Centra la imagen */
-            background-attachment: fixed; /* Fija la imagen al hacer scroll */
-            color: white; /* Color del texto blanco para que resalte sobre el fondo */
-            margin: 0;
-            padding: 0;
-            height: 100vh; /* Asegura que el body ocupe el 100% de la altura de la pantalla */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-        }
+         body {
+    background-image: url("AHORROS.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
 
-        /* Contenedor del video */
-        .video-container {
-            background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad para mejorar la visibilidad */
+        .container {
+            max-width: 800px;
+            margin: auto;
             padding: 20px;
-            border-radius: 10px; /* Bordes redondeados */
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Sombra para destacar el video */
-            width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-            max-width: 800px; /* Máximo ancho del contenedor */
         }
 
-        /* Video responsivo */
         video {
             width: 100%;
             height: auto;
             display: block;
-            margin: 0 auto;
-        }
-
-        /* Botón para regresar al inicio */
-        .d-flex {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            z-index: 1;
+            margin: 20px auto; /* Añadido margen superior e inferior */
         }
 
         /* Media Query para pantallas pequeñas */
         @media (max-width: 576px) {
-            .video-container {
-                width: 90%; /* Contenedor del video ocupa un 90% en pantallas pequeñas */
-                padding: 10px;
+            .container {
+                padding: 10px; /* Reducir el padding en móviles */
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- Botón de regresar al inicio -->
     <div class="d-flex justify-content-end mt-3">
         <a href="index.html" class="btn btn-success">Volver al inicio</a>
     </div>
 
-    <!-- Contenedor del video -->
-    <div class="container">
+    <div class="container mb-3">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <div class="video-container text-center">
-                    <!-- Video responsivo -->
+                <div class="text-center">
                     <video controls src="video1.mp4" type="video/mp4"></video>
                 </div>
             </div>
         </div>
     </div>
+   
 
     <!-- Bootstrap JS (necesario para que algunos componentes de Bootstrap funcionen) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
